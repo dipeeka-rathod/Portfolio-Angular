@@ -1,15 +1,30 @@
-const { shareAll, withModuleFederationPlugin } = require('@angular-architects/module-federation/webpack');
+const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 
 module.exports = withModuleFederationPlugin({
 
   name: 'Portfolio-Angular',
 
-  exposes: {
-    './Component': './src\app\app.component.ts',
+  remotes: {
+    calculatorApp: "calculatorApp@http://localhost:4201/remoteEntry.js"
   },
 
-  shared: {
-    ...shareAll({ singleton: true, strictVersion: true, requiredVersion: 'auto' }),
-  },
-
-});
+      shared: {
+        "@angular/core": {
+          singleton: true,
+          strictVersion: true,
+          requiredVersion: "auto",
+        },
+        "@angular/common": {
+          singleton: true,
+          strictVersion: true,
+          requiredVersion: "auto",
+        },
+        "@angular/router": {
+          singleton: true,
+          strictVersion: true,
+          requiredVersion: "auto",
+        },
+      },
+    }),
+  ],
+};
