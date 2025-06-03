@@ -1,0 +1,33 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #fff;
+  color: #333;
+  display: flex;
+  align-items: center;
+
+  .logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding-left: 1rem;
+  }
+
+  .spacer {
+    flex: 1 1 auto;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 1rem;
+
+    a {
+      font-weight: 500;
+      text-transform: uppercase;
+
+      &.active {
+        color: 4b0edf;
+      }
+    }
+  }
+}
