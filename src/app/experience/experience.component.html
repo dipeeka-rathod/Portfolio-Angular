@@ -1,1 +1,19 @@
-<p>experience works!</p>
+<section class="work-experience-section">
+    <h2 class="section-title">💼 Work Experiences</h2>
+    <div class="timeline">
+        <div class="timeline-item" *ngFor="let exp of experiences">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+                <h3 class="company">{{ exp.company }}</h3>
+                <div class="meta">
+                    <span class="role">{{ exp.role }}</span> •
+                    <span class="duration">{{ exp.duration }}</span> •
+                    <span class="location"><i class="fas fa-map-marker-alt"></i> {{ exp.location }}</span>
+                </div>
+                <ul class="responsibilities">
+                    <li *ngFor="let task of exp.responsibilities">{{ task }}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

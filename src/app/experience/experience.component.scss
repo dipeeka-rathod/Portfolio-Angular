@@ -1,0 +1,82 @@
+.work-experience-section {
+  padding: 3rem 1.5rem;
+  background-color: #f7f9fc;
+  border-radius: 16px;
+
+  .section-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #005792;
+    margin-bottom: 2rem;
+    position: relative;
+  }
+
+  .timeline {
+    position: relative;
+    margin-left: 2rem;
+    border-left: 3px solid #005792;
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 2.5rem;
+      padding-left: 2rem;
+
+      .timeline-marker {
+        position: absolute;
+        top: 0;
+        left: -10px;
+        width: 16px;
+        height: 16px;
+        background-color: #005792;
+        border-radius: 50%;
+      }
+
+      .timeline-content {
+        background: #fff;
+        padding: 1.5rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+        .company {
+          font-weight: bold;
+          font-size: 1.2rem;
+          color: #2c3e50;
+        }
+
+        .meta {
+          font-size: 0.95rem;
+          color: #666;
+          margin-bottom: 0.8rem;
+
+          i {
+            color: #0077b6;
+          }
+        }
+
+        .responsibilities {
+          padding-left: 1rem;
+          list-style-type: disc;
+
+          li {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            color: #444;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .timeline {
+      border-left: none;
+      .timeline-item {
+        padding-left: 0;
+
+        .timeline-marker {
+          display: none;
+        }
+      }
+    }
+  }
+}

@@ -12,6 +12,9 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { ProjectsComponent } from './projects/projects.component';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatButtonModule } from '@angular/material/button';
+
 
 @NgModule({
   declarations: [
@@ -23,12 +26,16 @@ import { ProjectsComponent } from './projects/projects.component';
     HomeComponent,
     NavbarComponent,
     ProjectsComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
+    MatToolbarModule,
+    MatExpansionModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

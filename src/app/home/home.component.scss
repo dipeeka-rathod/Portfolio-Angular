@@ -1,9 +1,65 @@
-.container {
-  font-family: "Roboto", sans-serif;
-  padding: 30px;
-}
-.profile {
-  color: #666;
-  font-size: 14px;
-  padding: 30px;
+.home-container {
+  padding: 3rem 2rem;
+  background: linear-gradient(to right, #f9f9f9, #eef1f5);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  color: #333;
+  font-family: "Segoe UI", sans-serif;
+
+  .intro {
+    text-align: center;
+    margin-bottom: 2rem;
+
+    .name {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #2c3e50;
+    }
+
+    .role {
+      font-size: 1.5rem;
+      color: #0077b6;
+      margin: 0.5rem 0;
+    }
+
+    .summary {
+      font-size: 1rem;
+      line-height: 1.6;
+      max-width: 700px;
+      margin: 0 auto;
+      color: #555;
+    }
+  }
+
+  .highlights {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+
+    h3 {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      color: #005792;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+
+      li {
+        margin-bottom: 0.7rem;
+        line-height: 1.5;
+        position: relative;
+
+        &::before {
+          content: "✔";
+          position: absolute;
+          left: -1.2rem;
+          color: #00b894;
+        }
+      }
+    }
+  }
 }

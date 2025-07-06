@@ -1,2 +1,24 @@
-<button (click)="loadCalculator()">calculator</button>
-<ng-container #calculatorContainer></ng-container>
+<section class="projects-section">
+    <h2 class="section-title">🧩 Projects</h2>
+
+    <mat-accordion>
+        <mat-expansion-panel *ngFor="let project of projects">
+            <mat-expansion-panel-header>
+                <mat-panel-title>{{ project.title }}</mat-panel-title>
+                <mat-panel-description>
+                    {{ project.technologies.join(', ') }}
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+
+            <p class="description">{{ project.description }}</p>
+
+            <div class="project-links" *ngIf="!project.isInternal && project.githubLink">
+                <a [href]="project.githubLink" target="_blank" rel="noopener">
+                    <i class="fab fa-github"></i> View on GitHub
+                </a>
+            </div>
+
+            <span *ngIf="project.isInternal" class="note">🔒 Internal Project – Code not publicly available</span>
+        </mat-expansion-panel>
+    </mat-accordion>
+</section>

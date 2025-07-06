@@ -1,16 +1,15 @@
 .navbar {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: #fff;
-  color: #333;
   display: flex;
   align-items: center;
+  padding: 0 2rem;
+  font-family: "Segoe UI", sans-serif;
 
   .logo {
     font-size: 1.4rem;
-    font-weight: bold;
-    padding-left: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
   }
 
   .spacer {
@@ -23,11 +22,23 @@
 
     a {
       font-weight: 500;
-      text-transform: uppercase;
+      color: #ffffff;
+      border-radius: 4px;
+      padding: 0.4rem 1rem;
+      transition: background-color 0.3s ease;
 
-      &.active {
-        color: 4b0edf;
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+
+      &.active-link {
+        background-color: rgba(255, 255, 255, 0.2);
       }
     }
   }
+}
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
